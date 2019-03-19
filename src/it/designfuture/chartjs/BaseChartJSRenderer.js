@@ -24,13 +24,13 @@ sap.ui.define(['jquery.sap.global'],
 		oRM.writeClasses();
 		oRM.write(">");
 		
-		if (oControl.getHeight() !== undefined && oControl.getHeight() !== null) {
-			oRM.addStyle("height", oControl.getHeight());
-		}
-		if (oControl.getWidth() !== undefined && oControl.getWidth() !== null) {
-			oRM.addStyle("width", oControl.getWidth());
-		}
-		oRM.writeStyles();
+		// if (oControl.getHeight() !== undefined && oControl.getHeight() !== null) {
+		// 	oRM.addStyle("height", oControl.getHeight());
+		// }
+		// if (oControl.getWidth() !== undefined && oControl.getWidth() !== null) {
+		// 	oRM.addStyle("width", oControl.getWidth());
+		// }
+		// oRM.writeStyles();
 		
 		oRM.write("</canvas>");
 	};

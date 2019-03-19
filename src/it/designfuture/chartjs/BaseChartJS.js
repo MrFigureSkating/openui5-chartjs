@@ -1,9 +1,10 @@
 // Provides control it.designfuture.chartjs.BaseChartJS
 sap.ui.define([
 	"sap/ui/core/Control",
+	'./3rdparty/moment',
 	'./3rdparty/Chart',
 	'./library'
-], function (Control, ChartJS, library) {
+], function (Control, moment, ChartJS, library) {
 	"use strict";
 	
 	/**
@@ -930,6 +931,19 @@ sap.ui.define([
 			this.setProperty("datasets", oDatasets, true);
 			if ( this.__chart ) {
 				this.__chart.data.datasets = oDatasets;
+			}
+			this.updateChart();
+		},
+
+		/**
+		 * Update Chart Scales
+		 * @public
+		 * @param {object} oScales - Chart Scales
+		 */
+		setScales: function(oScales) {
+			this.setProperty("scales", oScales, true);
+			if ( this.__chart ) {
+				this.__chart.options.scales = oScales;
 			}
 			this.updateChart();
 		},

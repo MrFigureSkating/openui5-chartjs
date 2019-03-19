@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 			dest: 'dist',
 			demo: 'test/demo',
 			src_chartjs: 'node_modules/chart.js/dist',
+			src_moment: 'node_modules/moment',
 			bower_components: 'bower_components',
 			node_modules: 'node_modules'
 		},
@@ -87,6 +88,7 @@ module.exports = function(grunt) {
 		        options: {
 		            resources: [
 		                { cwd: '<%= dir.src %>' },
+						{ cwd: '<%= dir.src_moment %>', src: 'moment.js', prefix: 'it/designfuture/chartjs/3rdparty' },
 		                { cwd: '<%= dir.src_chartjs %>', src: 'Chart.js', prefix: 'it/designfuture/chartjs/3rdparty' }
 		            ],
 		            dest: '<%= dir.dest %>',
